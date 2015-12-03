@@ -3,4 +3,38 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--默认的背景色-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!--三种线的颜色，从浅到深-->
+    <color name="wire_shallow">#ebebf5</color>
+    <color name="wire_middle">#d0d0d9</color>
+    <color name="wire_deep">#e1e5e5</color>
+
+    <color name="wire_colours">#6aaeb4</color>
+
+    <!--状态栏的颜色，百分之八十的白色-->
+    <color name="status_color">#ffffff</color>
+
+    <!--默认字体颜色-->
+    <color name="textdef">#2c2c2c</color>
+    <color name="textelse">#6f6d6d</color>
+
+    <!--几种字体颜色-->
+    <color name="text_shallow">#6aaeb4</color>
+    <color name="text_middle">#6aaeb4</color>
+    <color name="text_deep">#6aaeb4</color>
+
+    <!---->
+    <color name="main_pre">#86ccd1</color>
+    <color name="main_nor">#2c2c2c</color>
+    <color name="outer_round">#99d6db</color>
+
+    <color name="down_pre">#ededed</color>
+    <color name="down_nor">#ffffff</color>
+
+    <!--默认的灰色-->
+    <color name="def_gary">#f5f5f5</color>
 </resources>
