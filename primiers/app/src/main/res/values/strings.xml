@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">primiers</string>
+
+    <string name="aboutme">关于我们</string>
+    <string name="feedback">意见反馈</string>
+
+    <string name="Jelly">Jelly</string>
+    <string name="KitKat">KitKat</string>
+    <string name="Lollipop">Lollipop</string>
+
+    <array name="drawer_text">
+        <item name="Jelly">Jelly</item>
+        <item name="KitKat">KitKat</item>
+        <item name="Lollipop">Lollipop</item>
+    </array>
+
+    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
 </resources>

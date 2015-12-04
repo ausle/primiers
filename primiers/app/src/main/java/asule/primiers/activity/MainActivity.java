@@ -1,42 +1,40 @@
 package asule.primiers.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+
 import java.util.ArrayList;
-import java.util.List;
+
 import asule.primiers.BaseActivity;
 import asule.primiers.R;
-import asule.primiers.adapter.MyListViewAdapter;
-import asule.primiers.bean.DrawerEntity;
 import asule.primiers.fragment.BaseFragment;
 import asule.primiers.fragment.DrawerOneFragment;
 import asule.primiers.fragment.DrawerThreeFragment;
 import asule.primiers.fragment.DrawerTwoFragment;
-import asule.primiers.holder.BaseHolder;
-import asule.primiers.holder.DrawerHolder;
 import asule.primiers.utils.UIHelper;
+import asule.primiers.view.NoSlideViewPager;
 
 public class MainActivity extends BaseActivity {
 
     private Toolbar toolbarMain;
-    private ViewPager vpMain;
-    private ListView lvDrawer;
-    private ArrayList<DrawerEntity> drawerEntity;
+    private NoSlideViewPager vpMain;
     private DrawerLayout mDrawer;
-
-    private int mCurrentPosition=0;
-    private DrawerAdapter drawerAdapter;
+    private NavigationView mNavigation;
+    private FloatingActionButton btnFloting;
     private ArrayList<BaseFragment> mFragments;
+    private String[] drawerTextArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,74 +42,23 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         initView();
         initData();
-        initLister();
-    }
-
-    private void initLister() {
-        //把ToolBar构成一个新的actionbar
-        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, toolbarMain, R.string.app_name, R.string.app_name){
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                setTitle(drawerEntity.get(mCurrentPosition).getContent());
-            }
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-            }
-        };
-        //将toolbar和ActionBarDrawerToggle的监听绑定
-        mDrawerToggle.syncState();//DrawerLayout的indicator与其安全连接
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawer.setDrawerListener(mDrawerToggle);
-        lvDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mCurrentPosition=position;
-                drawerAdapter.notifyDataSetChanged();
-                mDrawer.closeDrawer(Gravity.LEFT);
-                for (int i = 0; i <parent.getCount(); i++) {
-                    if (i==position){
-                        view.setBackgroundResource(R.color.down_pre);
-                    }else{
-                        parent.getChildAt(i).setBackgroundResource(R.color.down_nor);
-                    }
-                }
-                vpMain.setCurrentItem(mCurrentPosition,false);
-            }
-        });
+        initListener();
     }
 
     private void initData() {
-        drawerEntity = new ArrayList<>();
-        drawerEntity.add(new DrawerEntity("android_1", R.mipmap.growup_nor));
-        drawerEntity.add(new DrawerEntity("android_2", R.mipmap.explore_nor));
-        drawerEntity.add(new DrawerEntity("android_3", R.mipmap.my_nor));
-        drawerAdapter = new DrawerAdapter(drawerEntity,true);
-        lvDrawer.setAdapter(drawerAdapter);
-        setTitle(drawerEntity.get(mCurrentPosition).getContent());
-
+        drawerTextArray = UIHelper.getStringArray(R.array.drawer_text);
         mFragments = new ArrayList<>();
         mFragments.add(new DrawerOneFragment());
         mFragments.add(new DrawerTwoFragment());
         mFragments.add(new DrawerThreeFragment());
         if (null != mFragments && !mFragments.isEmpty()) {
+            vpMain.setScanScroll(false);
             vpMain.setOffscreenPageLimit(mFragments.size());
             vpMain.setAdapter(new MainFragmentAdapter(getSupportFragmentManager(), mFragments));
         }
     }
 
-    private void initView() {
-        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
-        toolbarMain = (Toolbar) findViewById(R.id.toolbar_main);
-        setTitle("一行白鹭");
-        setSupportActionBar(toolbarMain);//取代ActionBar
-        toolbarMain.setPadding(0, UIHelper.getStatusHeight(this), 0, 0);
-        vpMain = (ViewPager) findViewById(R.id.vp_main);
-        lvDrawer = (ListView) findViewById(R.id.lv_drawer);
-    }
-
-    class MainFragmentAdapter extends FragmentPagerAdapter{
+    class MainFragmentAdapter extends FragmentPagerAdapter {
         private ArrayList<BaseFragment> mFragments;
         public MainFragmentAdapter(FragmentManager fm, ArrayList<BaseFragment> fragments) {
             super(fm);
@@ -129,13 +76,89 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    class DrawerAdapter extends MyListViewAdapter<DrawerEntity>{
-        public DrawerAdapter(List<DrawerEntity> mListData,boolean isDrawer) {
-            super(mListData,isDrawer);
+    private void initListener() {
+        mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            private MenuItem tempItem;
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                if (tempItem != null)tempItem.setChecked(false);
+                menuItem.setChecked(true);
+                int position=0;
+                for (int i = 0; i <drawerTextArray.length; i++) {
+                    if (menuItem.getTitle().equals(drawerTextArray[i])){
+                        position=i;
+                    }
+                }
+                toolbarMain.setTitle(menuItem.getTitle());
+                vpMain.setCurrentItem(position,false);
+                mDrawer.closeDrawer(Gravity.LEFT);
+                tempItem = menuItem;
+                return true;//返回true，表示显示该MenuItem，并选中
+            }
+        });
+        btnFloting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Google come", Snackbar.LENGTH_LONG)
+                        .setAction("Close", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Snackbar.make(v, "i am come", Snackbar.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setActionTextColor(UIHelper.getColor(R.color.colorAccent))
+                        .show();
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawer.openDrawer(GravityCompat.START);
+                return true;
         }
-        @Override
-        public BaseHolder getHolder() {
-            return new DrawerHolder();
-        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void initView() {
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
+        toolbarMain = (Toolbar) findViewById(R.id.toolbar_main);
+        mNavigation = (NavigationView) findViewById(R.id.drawer_navigation);
+        vpMain = (NoSlideViewPager) findViewById(R.id.vp_main);
+        btnFloting = (FloatingActionButton) findViewById(R.id.btn_floating);
+        setSupportActionBar(toolbarMain);//取代ActionBar
+        final ActionBar ab = getSupportActionBar();
+        ab.setHomeAsUpIndicator(R.mipmap.ic_menu);
+        ab.setDisplayHomeAsUpEnabled(true);
+        setTitle(UIHelper.getString(R.string.Jelly));
     }
 }
+/**
+     android.support.design.widget.CoordinatorLayout
+     它可以实现Meterial design中提到的动画效果，并且不需要写相关的动画代码。
+
+     第一种动画效果就是：自动产生向上移动的动画。
+     点击FloatingActionButton弹出SnackBar
+     FloatingActionButton的onClick传递的view，实际上会对SnackBar进行addView的操作。
+
+     第二种ToolBar的扩展和缩放
+        1，ToolBar随着手指滚动而滚动。
+           首先AppBarLayout包含ToolBar，让ToolBar响应滚动。
+        2，建立AppBarLayout和滚动之间的联系
+
+            @string/appbar_scrolling_view_behavior是一个特殊的字符串资源，可以与AppBarLayout.ScrollingViewBehavior相匹配。
+            它可以被绑定在事件发生的view上，当事件被触发后，只要AppBarLayout里定义了app:layout_scrollFlags属性，就可以在事件
+            发生后被触发。
+
+            app:layout_scrollFlags必须启动scroll这个属性
+                enterAlways指的是当view向上滑动，这个view就显示。
+
+        ToolBar的扩展需要放在CoordinatorLayout中。
+
+     第三种，可以在CollapsingToolbarLayout放入ImageView，可以在它折叠时渐渐淡出，用户滚动时ToolBar的高度也会改变。
+ */
+
+
+

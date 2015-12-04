@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item
+            android:checked="true"
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/growup_nor"
+            android:title="@string/Jelly"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@mipmap/explore_nor"
+            android:title="@string/KitKat"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@mipmap/my_nor"
+            android:title="@string/Lollipop"/>
+    </group>
+
+    <item android:title="Google Sub">
+        <menu>
+            <item
+                android:checkable="true"
+                android:icon="@mipmap/ic_colorize_nor"
+                android:title="Sub item 1"/>
+
+            <item
+                android:checkable="true"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Sub item 2"/>
+        </menu>
+    </item>
+</menu>

@@ -5,9 +5,23 @@
         <item name="colorPrimary">@color/colorPrimary</item>    <!--android:statusBarColor的颜色默认继承自colorPrimary-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColor">@color/textdef</item>
         <item name="android:textSize">@dimen/text_small</item>
+        <!--<item name="android:textColorPrimary">@color/white</item>--><!--可以设置字体的主色调-->
     </style>
+
+    <style name="PRIMIERS_THEME" parent="AppTheme">
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="toolOverlay" parent="Base.ThemeOverlay.AppCompat.Light">
+          <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
 </resources>

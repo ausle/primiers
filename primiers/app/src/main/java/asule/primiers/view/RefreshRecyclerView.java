@@ -1,4 +1,4 @@
-package asule.primiers.adapter;
+package asule.primiers.view;
 
 import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import asule.primiers.R;
+import asule.primiers.adapter.PrimaryAdapter;
 
 /**
  * Created by ghost on 15/8/5.

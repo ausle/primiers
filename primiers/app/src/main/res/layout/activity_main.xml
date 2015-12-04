@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
-    android:id="@+id/drawer"
+        android:fitsSystemWindows="true"
+        android:id="@+id/drawer"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <include layout="@layout/layout_content"/>
+
+        <!--
+            headerLayout表示的是drawer的header头部分
+            menu表示的是menuitem部分
+        -->
+        <asule.primiers.view.ScrimInsetsFrameLayout
+            android:layout_gravity="start"
+            android:elevation="10dp"
+            android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-                    <!--<android.support.v7.widget.Toolbar-->
-                        <!--android:background="@color/colorAccent"-->
-                        <!--android:id="@+id/toolbar_main"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"/>-->
-
-                    <include  layout="@layout/toolbar_manual"/>
-
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/vp_main"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="@color/white"
-            android:layout_gravity="start"
-            android:layout_width="@dimen/drawer_width"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:background="@mipmap/drawer_top"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/drawer_image_height" />
-            <ListView
-                android:divider="@null"
-                android:id="@+id/lv_drawer"
-                android:layout_width="match_parent"
+            <android.support.design.widget.NavigationView
+                android:id="@+id/drawer_navigation"
+                app:headerLayout="@layout/header_drawer"
+                app:menu="@menu/menu_drawer"
+                android:layout_width="@dimen/drawer_width"
                 android:layout_height="match_parent"/>
-        </LinearLayout>
+        </asule.primiers.view.ScrimInsetsFrameLayout>
 </android.support.v4.widget.DrawerLayout>
