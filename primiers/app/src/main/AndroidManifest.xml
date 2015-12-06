@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DetetailActivity"/>
+        <activity android:name=".detail.MeterialDemoDetetail"/>
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@
 
     <string name="aboutme">关于我们</string>
     <string name="feedback">意见反馈</string>
-
     <string name="Jelly">Jelly</string>
     <string name="KitKat">KitKat</string>
     <string name="Lollipop">Lollipop</string>
@@ -19,4 +18,27 @@
     bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
     cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
     the big cheese.</string>
+
+    <string name="meterial_design_demo">meterial design例子</string>
+    <string name="activity_init">activity生命周期</string>
+
+    <string name="onCreate">onCreate()
+            Activity创建就被调用，可以做一些初始化的工作，比如setContentView（）以及activity的初始化数据。</string>
+    <string name="onRestart">onReStart()
+            Activity正在重新启动，activity从不可见变为可见。
+            比如：按下Home，回到桌面，重新进入该activity就会调用。
+            没有finish的情况，进入另一个界面(activity)，才返回回来也会调用。</string>
+    <string name="onStart">onStart()
+            activity变得可见。但是没有位于前台。可以认为获得了焦点。</string>
+    <string name="onResume">onResume()
+            activity位于前台，正在前台工作。</string>
+    <string name="onPause">onPause()
+           activity正在停止，马上就要执行onStop，可以做一些存储数据，停止动画的工作。
+           但切不可以做耗时的操作。</string>
+    <string name="onStop">onStop()
+           activity停止，可以做一些重量级的回收工作。</string>
+    <string name="onDestrot">onDestroy()
+           activity销毁，可以做最后的回收和资源回收的工作。</string>
+
+
 </resources>

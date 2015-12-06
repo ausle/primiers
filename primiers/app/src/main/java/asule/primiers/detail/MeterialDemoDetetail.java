@@ -1,4 +1,4 @@
-package asule.primiers.activity;
+package asule.primiers.detail;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -12,7 +12,7 @@ import asule.primiers.R;
 /**
  * Created by Administrator on 2015/12/6.
  */
-public class DetetailActivity extends BaseActivity{
+public class MeterialDemoDetetail extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class DetetailActivity extends BaseActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         CollapsingToolbarLayout collapsingToolbar =(CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(cheeseName);
+
         ImageView viewById = (ImageView) findViewById(R.id.backdrop);
         viewById.setBackgroundResource(R.mipmap.drawer_top);
     }
