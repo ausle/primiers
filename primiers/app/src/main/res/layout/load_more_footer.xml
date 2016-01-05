@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/load_more_footer"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -23,9 +29,10 @@
                 android:layout_height="36dp"
                 android:gravity="center"
                 android:text="正在加载..."
-                android:textColor="@color/textdef"
-                android:textSize="@dimen/text_small"
+                android:textColor="#666666"
+                android:textSize="16sp"
                 android:visibility="visible" />
         </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>  

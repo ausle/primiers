@@ -21,6 +21,7 @@
 
     <string name="meterial_design_demo">meterial design例子</string>
     <string name="activity_init">activity生命周期</string>
+    <string name="baidu_map">百度地图</string>
 
     <string name="onCreate">onCreate()
             Activity创建就被调用，可以做一些初始化的工作，比如setContentView（）以及activity的初始化数据。</string>

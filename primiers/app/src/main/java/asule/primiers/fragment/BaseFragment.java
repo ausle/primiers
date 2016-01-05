@@ -39,9 +39,14 @@ public abstract class BaseFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initData();
+        initListener();
     }
 
     public void initData() {
+
+    }
+
+    public void initListener() {
 
     }
 

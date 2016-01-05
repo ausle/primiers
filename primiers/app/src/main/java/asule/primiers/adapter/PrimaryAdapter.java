@@ -1,8 +1,7 @@
 package asule.primiers.adapter;
 
-import android.content.Context;
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -11,54 +10,64 @@ import java.util.List;
 import asule.primiers.R;
 
 /**
- * Created by wcx on 2015/12/3.
+ * Created by wcx on 2015/12/22.
  */
-public abstract class PrimaryAdapter<T> extends RecyclerView.Adapter {
+public abstract class PrimaryAdapter<T> extends RecyclerView.Adapter{
 
-    private Context mContext;
-    private List<T> mData;
-    private final int FOOT_POSITION=1;
+    private static final int TYPE_FOOTER = 0;
+    private static final int TYPE_NORMAL = 1;
+    public static final String FOOTVIEWTAG="footview";
+    public List<T> mListData;
 
-    public PrimaryAdapter(Context context,List<T> data){
-        this.mContext=context;
-        this.mData=data;
+    public void setData(List<T> listData){
+        this.mListData=listData;
+    }
+    public List<T> getData(){
+        return mListData;
+    }
+
+    public Activity mActivity;
+    public PrimaryAdapter(Activity activity){
+        this.mActivity=activity;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if(viewType==FOOT_POSITION){
-            View footView = LayoutInflater.from(mContext).inflate(R.layout.load_more_footer, null);
-            return new FootViewHolder(footView);
+        if(viewType == TYPE_FOOTER){
+            View view = View.inflate(parent.getContext(), R.layout.load_more_footer, null);
+            return new FootViewHolder(view);
         }
-        return getViewHolder(parent,viewType);
+        return onCreateItem(parent,viewType);
     }
 
-    protected abstract RecyclerView.ViewHolder getViewHolder(ViewGroup parent, int viewType);
-    protected abstract void bindHolderData(RecyclerView.ViewHolder holder, int position);
+    public abstract RecyclerView.ViewHolder onCreateItem(ViewGroup parent, int viewType);
+    public abstract void onBindItem(RecyclerView.ViewHolder holder, int position);
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof FootViewHolder){
-            holder.itemView.setTag("foot");
+            holder.itemView.setTag(FOOTVIEWTAG);
+            holder.itemView.setVisibility(View.GONE);
             return;
         }
-        bindHolderData(holder,position);
+        onBindItem(holder,position);
     }
 
     @Override
     public int getItemViewType(int position) {
-        if(position+1>=getItemCount()){
-            return FOOT_POSITION;
+        if (position+1==getItemCount()){
+            return TYPE_FOOTER;
+        }else{
+            return TYPE_NORMAL;
         }
-        return 0;
     }
 
     @Override
     public int getItemCount() {
-        return mData.size()+1;
+        return mListData.size()+1;
     }
 
-   public static class FootViewHolder extends RecyclerView.ViewHolder{
+    static class FootViewHolder extends RecyclerView.ViewHolder{
         public FootViewHolder(View itemView) {
             super(itemView);
         }

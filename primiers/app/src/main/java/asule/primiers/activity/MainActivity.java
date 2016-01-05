@@ -1,9 +1,7 @@
 package asule.primiers.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,7 +11,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.ArrayList;
 
@@ -27,12 +24,11 @@ import asule.primiers.utils.UIHelper;
 import asule.primiers.view.NoSlideViewPager;
 
 public class MainActivity extends BaseActivity {
-
     private Toolbar toolbarMain;
     private NoSlideViewPager vpMain;
     private DrawerLayout mDrawer;
     private NavigationView mNavigation;
-    private FloatingActionButton btnFloting;
+//    private FloatingActionButton btnFloting;
     private ArrayList<BaseFragment> mFragments;
     private String[] drawerTextArray;
 
@@ -96,20 +92,20 @@ public class MainActivity extends BaseActivity {
                 return true;//返回true，表示显示该MenuItem，并选中
             }
         });
-        btnFloting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Google come", Snackbar.LENGTH_LONG)
-                        .setAction("Close", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Snackbar.make(v, "i am come", Snackbar.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setActionTextColor(UIHelper.getColor(R.color.colorAccent))
-                        .show();
-            }
-        });
+//        btnFloting.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(v, "Google come", Snackbar.LENGTH_LONG)
+//                        .setAction("Close", new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Snackbar.make(v, "i am come", Snackbar.LENGTH_SHORT).show();
+//                            }
+//                        })
+//                        .setActionTextColor(UIHelper.getColor(R.color.colorAccent))
+//                        .show();
+//            }
+//        });
     }
 
     @Override
@@ -127,7 +123,7 @@ public class MainActivity extends BaseActivity {
         toolbarMain = (Toolbar) findViewById(R.id.toolbar_main);
         mNavigation = (NavigationView) findViewById(R.id.drawer_navigation);
         vpMain = (NoSlideViewPager) findViewById(R.id.vp_main);
-        btnFloting = (FloatingActionButton) findViewById(R.id.btn_floating);
+//        btnFloting = (FloatingActionButton) findViewById(R.id.btn_floating);
         setSupportActionBar(toolbarMain);//取代ActionBar
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.mipmap.ic_menu);
@@ -154,9 +150,7 @@ public class MainActivity extends BaseActivity {
 
             app:layout_scrollFlags必须启动scroll这个属性
                 enterAlways指的是当view向上滑动，这个view就显示。
-
         ToolBar的扩展需要放在CoordinatorLayout中。
-
      第三种，可以在CollapsingToolbarLayout放入ImageView，可以在它折叠时渐渐淡出，用户滚动时ToolBar的高度也会改变。
  */
 

@@ -2,13 +2,12 @@ package asule.primiers.fragment;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
-
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-
 import asule.primiers.R;
 import asule.primiers.fragment.sub.ActivityLiftCycleFm;
+import asule.primiers.fragment.sub.BaiDuMapFm;
 import asule.primiers.fragment.sub.MeterialDemoFm;
 
 /**
@@ -23,6 +22,7 @@ public class DrawerOneFragment extends BaseFragment{
                 getChildFragmentManager(), FragmentPagerItems.with(mActivity)
                 .add(R.string.meterial_design_demo, MeterialDemoFm.class)
                 .add(R.string.activity_init,ActivityLiftCycleFm.class)
+                .add(R.string.baidu_map,BaiDuMapFm.class)
                 .create());
         ViewPager viewPager = (ViewPager)mView.findViewById(R.id.viewpager);
         viewPager.setAdapter(adapter);

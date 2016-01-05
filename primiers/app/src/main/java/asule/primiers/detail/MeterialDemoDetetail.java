@@ -23,7 +23,6 @@ public class MeterialDemoDetetail extends BaseActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         CollapsingToolbarLayout collapsingToolbar =(CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(cheeseName);
-
         ImageView viewById = (ImageView) findViewById(R.id.backdrop);
         viewById.setBackgroundResource(R.mipmap.drawer_top);
     }

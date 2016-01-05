@@ -1,0 +1,21 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:title="普通地图"
+        android:id="@+id/normal"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="卫星地图"
+        android:id="@+id/weixing"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:title="实时交通"
+        android:id="@+id/traffic"
+        app:showAsAction="always"/>
+</menu>
