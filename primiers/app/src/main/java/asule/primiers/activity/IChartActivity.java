@@ -19,7 +19,6 @@ import asule.primiers.view.IChartView;
 public class IChartActivity extends BaseActivity{
 
     private String[] dates=new String[]{"11-07","11-08","11-09","11-10"};
-    private int[] colors= new int[]{R.color.city1,R.color.city2,R.color.city3,R.color.city0};
     private int max=20;
     private int min=0;
     private int stroke=4;
@@ -33,10 +32,10 @@ public class IChartActivity extends BaseActivity{
         IChartView chartView= (IChartView) findViewById(R.id.chartview);
         chartView.setxValues(dates);
         chartView.setyValues(20);
-        for (int j = 0; j<10;j++) {
+        for (int j = 0; j<4;j++) {
             point = new ArrayList<>();
             for (int i = 0; i <dates.length; i++) {
-                point.add(new PointEntity(colors[i],new Random().nextInt(max -min+1) + min,stroke));
+                point.add(new PointEntity(new Random().nextInt(max-min+1)+min,stroke));
             }
             points.add(point);
         }

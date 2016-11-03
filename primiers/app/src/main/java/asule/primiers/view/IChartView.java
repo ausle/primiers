@@ -152,6 +152,8 @@ public class IChartView extends View{
     }
 
 
+    private int[] colors= new int[]{R.color.city1,R.color.city2,R.color.city3,R.color.city0};
+
     //画曲线
     private void drawPoint(Canvas canvas) {
         if (points==null||points.size()==0){
@@ -169,7 +171,6 @@ public class IChartView extends View{
 
         for (int i = 0; i <points.size(); i++) {
             List<PointEntity> pointEntities = points.get(i);
-
             for (int j = 0; j <pointEntities.size()-1; j++) {
                 PointEntity entityq = pointEntities.get(j);
                 PointEntity entityh = pointEntities.get(j + 1);
@@ -177,13 +178,14 @@ public class IChartView extends View{
                 Paint paint = new Paint();
                 paint.setStyle(Paint.Style.FILL);
                 paint.setStrokeWidth(entityq.getPointStroke());
-                paint.setColor(getResources().getColor(entityq.getPointColor()));
+                paint.setColor(getResources().getColor(colors[i]));
 
+                //之所以加上yBigTextHeight/2，是因为从上往下在draw
                 canvas.drawLine(
                         yBigTextWidth+yTextSpace+xSpace*j,
-                        height-(entityq.getPointValue()*pixel),
+                        height-(entityq.getPointValue()*pixel)+yBigTextHeight/2,
                         yBigTextWidth+yTextSpace+xSpace*(j+1),
-                        height-(entityh.getPointValue()*pixel),
+                        height-(entityh.getPointValue()*pixel)+yBigTextHeight/2,
                         paint);
             }
         }
@@ -315,8 +317,6 @@ public class IChartView extends View{
         this.points = points;
         invalidate();
     }
-
-
 
     private String getMaxText(String[] texts) {
         int maxLength=0;

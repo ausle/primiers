@@ -39,4 +39,9 @@ public class PointEntity {
         this.pointValue = pointValue;
         this.pointStroke = pointStroke;
     }
+
+    public PointEntity(int pointValue, int pointStroke) {
+        this.pointValue = pointValue;
+        this.pointStroke = pointStroke;
+    }
 }
