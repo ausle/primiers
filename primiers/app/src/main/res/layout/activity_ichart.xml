@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:asule="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <asule.primiers.view.IChartView
+            asule:xHeight="1"
+            asule:xColor="@color/black"
+            asule:xTextColor="@color/main_color"
+            asule:xTextSize="@dimen/text_size_nor"
+            asule:xTextSpace="20"
+            asule:xDegreeWidth="3"
+            asule:xDegreeHeight="10"
+            asule:xDegreeColor="@color/font_color_red"
+
+            asule:yHeight="1"
+            asule:yColor="@color/black"
+            asule:yTextColor="@color/main_color"
+            asule:yTextSize="@dimen/text_size_nor"
+            asule:yTextSpace="20"
+            asule:yDegreeWidth="10"
+            asule:yDegreeHeight="3"
+            asule:yDegreeColor="@color/font_color_red"
+
+
+            asule:pointColor="@color/font_color_red"
+            asule:pointStroke="2"
+
+
+            android:id="@+id/chartview"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+</LinearLayout>

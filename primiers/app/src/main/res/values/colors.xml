@@ -4,37 +4,129 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!--默认的背景色-->
-    <color name="white">#ffffff</color>
+    <color name="home_text_color">#868d97</color>
+    <color name="layout_bg_color">#F2F2EF</color>
+    <color name="division_line">#DBCFC0</color>
+    <color name="text_color_yellow">#ff7449</color>
+    <color name="text_color_red">#fa7878</color>
+    <color name="text_color_red_pre">#fa675c</color>
+    <color name="text_color_light">#A39B8E</color>
+    <color name="text_color_hint">#b2aeab</color>
+    <color name="text_color_nor">#626364</color>
+    <color name="text_color_pre">#231D1C</color>
+    <color name="text_color_title_black">#4b4b4b</color>
+
+    <color name="space_background">#ECECEC</color>
+    <!--<color name="title_red">#e8484b</color>-->
+    <color name="title_color">#FDE443</color>
+    <color name="title_red1">#f85b5c</color>
+    <color name="font_color_red">#cb4e50</color>
+
+    <color name="orange_red">#E77439</color>
+
+    <color name="orange">#ffe96e</color>
+    <color name="gray">#404040</color>
     <color name="black">#000000</color>
+    <color name="BTBlack">#33000000</color>
+    <color name="bottom_navigation_bg">#39302b</color>
 
-    <!--三种线的颜色，从浅到深-->
-    <color name="wire_shallow">#ebebf5</color>
-    <color name="wire_middle">#d0d0d9</color>
-    <color name="wire_deep">#e1e5e5</color>
+    <color name="gray_x">#22404040</color>
 
-    <color name="wire_colours">#6aaeb4</color>
+    <color name="bg_color">#f5f4f2</color>
+    <color name="select">#f0f5f3</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="hint_text_color">#b6b6b6</color>
 
-    <!--状态栏的颜色，百分之八十的白色-->
-    <color name="status_color">#ffffff</color>
+    <color name="radio_pre">#e95051</color>
+    <color name="radio_nor">#b5b5b5</color>
+    <color name="shop_info_button_nor">#ffc2c0</color>
+    <color name="shop_info_button_pre">#d1d2d3</color>
+    <color name="dsc_color">#686868</color>
+    <color name="banner_bg">#aeaca5</color>
+    <color name="gostart">#68c6fb</color>
+    <color name="gostart_pre">#499dcc</color>
 
-    <!--默认字体颜色-->
-    <color name="textdef">#2c2c2c</color>
-    <color name="textelse">#6f6d6d</color>
+    <!--背景颜色 -->
+    <color name="window_bg_color">#f4f4f4</color>
+    <color name="white">#ffffff</color>
+    <color name="left_window_bg_color">#f8f3f0</color>
 
-    <!--几种字体颜色-->
-    <color name="text_shallow">#6aaeb4</color>
-    <color name="text_middle">#6aaeb4</color>
-    <color name="text_deep">#6aaeb4</color>
+    <!--分割线颜色,分为白色背景和灰色背景-->
+    <color name="wire_color">#e8e8e8</color>
+    <color name="wire_color1">#dddddd</color>
 
-    <!---->
-    <color name="main_pre">#86ccd1</color>
-    <color name="main_nor">#2c2c2c</color>
-    <color name="outer_round">#99d6db</color>
+    <!--文字的主色和辅色 -->
+    <color name="text_main_color">#31353a</color>
+    <color name="text_sub_color">#868d99</color>
+    <color name="search_text_color">#cccccc</color>
 
-    <color name="down_pre">#ededed</color>
+    <!--主色和辅色 -->
+    <color name="main_color">#3066c4</color>
+    <color name="sub_color">#5bacff</color>
+    <color name="sub_sub_color">#5bacff</color>
+
+    <!--按下和抬起 -->
+    <color name="btn_down_nor">#3066c4</color>
+    <color name="btn_down_pre">#3e82f7</color>
+
     <color name="down_nor">#ffffff</color>
+    <color name="down_pre">#f6f6f6</color>
 
-    <!--默认的灰色-->
-    <color name="def_gary">#f5f5f5</color>
+    <color name="transparent">#00ffffff</color>
+
+
+    <color name="tag01">#21a4ff</color>
+    <color name="tag02">#00d2ff</color>
+    <color name="tag03">#8d8d8d</color>
+    <color name="tag04">#4c4743</color>
+    <color name="tag05">#ff9e21</color>
+    <color name="tag06">#ff7950</color>
+
+    <color name="btn_blue_normal">#21a4ff</color>
+    <color name="btn_blue_press">#018aff</color>
+    <color name="btn_yellow_normal">#ff9e21</color>
+    <color name="btn_yellow_press">#ff8400</color>
+    <color name="line_color">#eaebef</color>
+
+
+    <color name="shaixuan_text_bg">#e7e7e7</color>
+    <color name="shaixuan_bg">#f8f8f8</color>
+    <color name="shaixuan_outer_bg">#EBEBEB</color>
+    <color name="detail_act_title_bg">#5021a4ff</color>
+
+
+    <color name="nopass">#ff3333</color>
+    <color name="passing">#ff9e21</color>
+
+
+    <color name="xxx">#40000000</color>
+
+    <color name="xxxx">#383C47</color>
+    <color name="xxxxx">#2D313C</color>
+
+    <color name="solid1">#ff4d4c</color>
+    <color name="solid2">#3b6cc6</color>
+    <color name="solid3">#00a2a0</color>
+    <color name="solid4">#8bc045</color>
+    <color name="solid5">#dea132</color>
+
+    <color name="group1">#f48751</color>
+    <color name="group2">#f6a161</color>
+    <color name="group3">#ecb853</color>
+    <color name="group4">#89b601</color>
+    <color name="group5">#02aea8</color>
+
+    <color name="text_forward">#ffb04a</color>
+    <color name="text_back">#373c47</color>
+
+    <color name="gongwei_color">#3F82F7</color>
+    <color name="gongwei_color1">#7CA5F2</color>
+
+    <color name="city0">#218bf0</color>
+    <color name="city1">#f0b831</color>
+    <color name="city2">#e56b51</color>
+    <color name="city3">#56c6be</color>
+
+    <color name="sel_bottom_color">#3e82f7</color>
+
 </resources>

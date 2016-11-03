@@ -11,7 +11,6 @@
                 android:id="@+id/RecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/wire_shallow"
                 android:dividerHeight="1dp">
         </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.SwipeRefreshLayout>

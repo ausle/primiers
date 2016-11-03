@@ -21,9 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/PRIMIERS_THEME">
 
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="urwaET6Ui1Z3ux19UK6CwI52" />
 
         <activity
             android:name=".activity.MainActivity">
@@ -33,22 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".detail.MeterialDemoDetetail"/>
-        <activity android:name=".activity.BaiduMapActivity"/>
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote">
-
-                    <intent-filter>
-                            <action android:name="com.baidu.location.service_v2.2">
-
-                            </action>
-
-                    </intent-filter>
+        <activity android:name=".activity.IChartActivity"/>
 
 
-        </service>
+
     </application>
 </manifest>

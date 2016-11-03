@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="PRIMIERS_THEME" parent="AppTheme">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowTranslucentStatus">true</item>            <!--  状态栏透明 -->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>            &lt;!&ndash;  状态栏透明 &ndash;&gt;-->
         <!--<item name="android:fitsSystemWindows">true</item>-->
         <!--<item name="android:statusBarColor">@color/colorPrimaryDark</item>-->
     </style>

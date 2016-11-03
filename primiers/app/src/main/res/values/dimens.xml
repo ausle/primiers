@@ -23,15 +23,49 @@
     <dimen name="text_big">18sp</dimen>
 
     <!--线的三种高度-->
-    <dimen name="wire_small">0.5dp</dimen>
     <dimen name="wire_middle">1dp</dimen>
 
     <!--左侧菜单抽屉的宽度-->
-    <dimen name="drawer_width">250dp</dimen>
 
     <dimen name="drawer_image_height">150dp</dimen>
 
 
     <dimen name="card_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="layout_padding_big">18dp</dimen>
+    <dimen name="layout_padding_nor">12dp</dimen>
+    <dimen name="title_height">44dp</dimen>
+
+    <dimen name="text_margin">16dp</dimen>
+
+
+    <dimen name="drawer_width">300dp</dimen>
+
+    <dimen name="text_size_small_s">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_nor">14sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_big_big">18sp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="title_size1">22sp</dimen>
+
+    <dimen name="wire_small">0.5dp</dimen>
+    <dimen name="wire_nor">1dp</dimen>
+    <dimen name="wire_big">2dp</dimen>
+    <dimen name="wire_big_big">3dp</dimen>
+    <dimen name="wire_more">4dp</dimen>
+
+    <dimen name="item_height">200dp</dimen>
+
+    <dimen name="item_leftmargin">16dp</dimen>
+    <dimen name="drawer_img_height">200dp</dimen>
+    <dimen name="btn_height">45dp</dimen>
+    <dimen name="btn_height_small">30dp</dimen>
+    <dimen name="scroll_height">60dp</dimen>
+
+
+    <dimen name="module_space">10dp</dimen>
+
+    <dimen name="new_module_space">10dp</dimen>
 </resources>

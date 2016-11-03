@@ -1,38 +1,47 @@
 package asule.primiers.fragment;
 
-import android.support.v4.view.ViewPager;
+import android.content.Intent;
 import android.view.View;
-import com.ogaclejapan.smarttablayout.SmartTabLayout;
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
+import android.widget.LinearLayout;
+
 import asule.primiers.R;
-import asule.primiers.fragment.sub.ActivityLiftCycleFm;
-import asule.primiers.fragment.sub.BaiDuMapFm;
-import asule.primiers.fragment.sub.MeterialDemoFm;
+import asule.primiers.activity.IChartActivity;
+
 
 /**
  * Created by wcx on 2015/12/3.
  */
-public class DrawerOneFragment extends BaseFragment{
+public class DrawerOneFragment extends BaseFragment implements View.OnClickListener {
+
+    private View mView;
+    private LinearLayout ll;
+    private Intent intent;
 
     @Override
     protected View initView() {
-        View mView = View.inflate(mActivity, R.layout.fragment_one, null);
-        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
-                getChildFragmentManager(), FragmentPagerItems.with(mActivity)
-                .add(R.string.meterial_design_demo, MeterialDemoFm.class)
-                .add(R.string.activity_init,ActivityLiftCycleFm.class)
-                .add(R.string.baidu_map,BaiDuMapFm.class)
-                .create());
-        ViewPager viewPager = (ViewPager)mView.findViewById(R.id.viewpager);
-        viewPager.setAdapter(adapter);
-        SmartTabLayout viewPagerTab=(SmartTabLayout) mView.findViewById(R.id.viewpagertab);
-        viewPagerTab.setViewPager(viewPager);
+        mView = View.inflate(mActivity, R.layout.fragment_one, null);
+        ll = (LinearLayout) mView.findViewById(R.id.ll);
         return mView;
     }
 
     @Override
     public void initData() {
         super.initData();
+    }
+
+    @Override
+    public void initListener() {
+        super.initListener();
+        mView.findViewById(R.id.card0).setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.card0:
+                intent = new Intent(mActivity,IChartActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

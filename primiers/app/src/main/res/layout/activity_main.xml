@@ -8,23 +8,4 @@
         android:layout_height="match_parent">
 
         <include layout="@layout/layout_content"/>
-
-        <!--
-            headerLayout表示的是drawer的header头部分
-            menu表示的是menuitem部分
-        -->
-        <asule.primiers.view.ScrimInsetsFrameLayout
-            android:layout_gravity="start"
-            android:elevation="10dp"
-            android:fitsSystemWindows="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.design.widget.NavigationView
-                android:id="@+id/drawer_navigation"
-                app:headerLayout="@layout/header_drawer"
-                app:menu="@menu/menu_drawer"
-                android:layout_width="@dimen/drawer_width"
-                android:layout_height="match_parent"/>
-        </asule.primiers.view.ScrimInsetsFrameLayout>
 </android.support.v4.widget.DrawerLayout>

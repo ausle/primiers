@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ScrimInsetsView">
-        <attr name="appinsetForeground" format="reference|color" />
+    <declare-styleable name="IChartView">
+
+
+        <attr name="xTextWidth" format="integer"/>
+        <attr name="xTextHeight" format="integer"/>
+        <attr name="xTextColor" format="color"/>
+        <attr name="xTextSize" format="integer"/>
+        <attr name="xWidth" format="integer"/>
+        <attr name="xHeight" format="integer"/>
+        <attr name="xColor" format="color"/>
+        <attr name="xTextSpace" format="integer"/>
+
+        <attr name="xDegreeColor" format="color"/>
+
+        <attr name="xDegreeWidth" format="integer"/>
+        <attr name="xDegreeHeight" format="integer"/>
+
+
+        <attr name="yTextWidth" format="integer"/>
+        <attr name="yTextHeight" format="integer"/>
+        <attr name="yTextColor" format="color"/>
+        <attr name="yTextSize" format="integer"/>
+        <attr name="yWidth" format="integer"/>
+        <attr name="yHeight" format="integer"/>
+        <attr name="yColor" format="color"/>
+        <attr name="yTextSpace" format="integer"/>
+
+        <attr name="yDegreeWidth" format="integer"/>
+        <attr name="yDegreeHeight" format="integer"/>
+        <attr name="yDegreeColor" format="color"/>
+
+        <attr name="pointColor" format="color"></attr>
+        <attr name="pointStroke" format="integer"></attr>
+
     </declare-styleable>
 </resources>

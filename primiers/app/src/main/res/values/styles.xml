@@ -24,4 +24,20 @@
           <item name="android:textColorPrimary">@color/white</item>
     </style>
 
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="tabIndicatorColor">@color/text_main_color</item>
+        <item name="tabIndicatorHeight">@dimen/wire_big</item>
+        <item name="tabPaddingStart">25dp</item>
+        <item name="tabPaddingEnd">25dp</item>
+        <item name="tabSelectedTextColor">@color/text_main_color</item>
+        <item name="tabTextAppearance">@style/tab</item>
+    </style>
+
+    <style name="tab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_nor</item>
+        <!-- 未选中的字体颜色 -->
+        <item name="android:textColor">@color/text_sub_color</item>
+    </style>
 </resources>
