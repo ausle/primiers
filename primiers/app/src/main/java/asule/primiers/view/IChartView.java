@@ -11,7 +11,7 @@ import android.view.View;
 import java.util.List;
 
 import asule.primiers.R;
-import asule.primiers.bean.PointEntity;
+import asule.primiers.entity.PointEntity;
 
 
 /**

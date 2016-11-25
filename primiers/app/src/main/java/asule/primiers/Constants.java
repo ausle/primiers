@@ -11,11 +11,4 @@ public class Constants {
     public static final String LOG = "====>";
     public static final String LOG_SYS = "Sys====>";
     public static final String INTENT_FLAG = "HAPPY";
-
-    public static final String[] sCheeseStrings = {
-            "我不入地狱", "Dance", "Opening", "立春院", "Go West",
-            "Liekkas", "Because of you", "God is Girl", "The Show", "Here With You"
-    };
-
-
 }

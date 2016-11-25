@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="asule.primiers">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
@@ -21,7 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/PRIMIERS_THEME">
 
-
         <activity
             android:name=".activity.MainActivity">
             <intent-filter>
@@ -30,10 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.IChartActivity"/>
-
-
+        <activity android:name=".activity.IClockActivity"/>
+        <activity android:name=".activity.IContactActivity"/>
 
     </application>
 </manifest>

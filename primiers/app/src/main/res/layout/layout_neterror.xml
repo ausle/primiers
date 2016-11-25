@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <TextView
+            android:drawablePadding="10dp"
+            android:textColor="@color/text_sub_color"
+            android:textSize="@dimen/text_size_nor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/net_error"
+            android:drawableTop="@mipmap/ic_error" />
+
+        <Button
+            android:textColor="@color/text_sub_color"
+            android:textSize="@dimen/text_size_nor"
+            android:id="@+id/buttonError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reloading"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</LinearLayout>

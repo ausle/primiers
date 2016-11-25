@@ -4,44 +4,23 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
 
-    <!--一行的高度-->
-    <dimen name="line_height">45dp</dimen>
+    <!--button默认的高度-->
+    <dimen name="btn_def_height">45dp</dimen>
 
     <!--margin值，一般取15dp-->
-    <dimen name="margin">15dp</dimen>
-    <dimen name="margin_register_left">10dp</dimen>
+    <dimen name="def_margin">15dp</dimen>
 
     <!--padding值，一般取15dp-->
-    <dimen name="padding">15dp</dimen>
-
-    <!--注册页面的padding值-->
-    <dimen name="padding_else">15dp</dimen>
-
-    <!--字的三种大小-->
-    <dimen name="text_small">14sp</dimen>
-    <dimen name="text_middle">16sp</dimen>
-    <dimen name="text_big">18sp</dimen>
+    <dimen name="def_padding">15dp</dimen>
 
     <!--线的三种高度-->
-    <dimen name="wire_middle">1dp</dimen>
+    <dimen name="wire_small">0.5dp</dimen>
+    <dimen name="wire_nor">1dp</dimen>
+    <dimen name="wire_big">2dp</dimen>
+    <dimen name="wire_big_big">3dp</dimen>
+    <dimen name="wire_more">4dp</dimen>
 
-    <!--左侧菜单抽屉的宽度-->
-
-    <dimen name="drawer_image_height">150dp</dimen>
-
-
-    <dimen name="card_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-
-    <dimen name="layout_padding_big">18dp</dimen>
-    <dimen name="layout_padding_nor">12dp</dimen>
-    <dimen name="title_height">44dp</dimen>
-
-    <dimen name="text_margin">16dp</dimen>
-
-
-    <dimen name="drawer_width">300dp</dimen>
-
+    <!--字的三种大小-->
     <dimen name="text_size_small_s">10sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_nor">14sp</dimen>
@@ -50,22 +29,53 @@
     <dimen name="title_size">20sp</dimen>
     <dimen name="title_size1">22sp</dimen>
 
-    <dimen name="wire_small">0.5dp</dimen>
-    <dimen name="wire_nor">1dp</dimen>
-    <dimen name="wire_big">2dp</dimen>
-    <dimen name="wire_big_big">3dp</dimen>
-    <dimen name="wire_more">4dp</dimen>
-
-    <dimen name="item_height">200dp</dimen>
-
-    <dimen name="item_leftmargin">16dp</dimen>
-    <dimen name="drawer_img_height">200dp</dimen>
-    <dimen name="btn_height">45dp</dimen>
-    <dimen name="btn_height_small">30dp</dimen>
-    <dimen name="scroll_height">60dp</dimen>
-
-
+    <!-- 模块之间的距离-->
     <dimen name="module_space">10dp</dimen>
 
-    <dimen name="new_module_space">10dp</dimen>
+
+
+    <dimen name="_150dp">150dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="_140dp">140dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_55dp">55dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_80dp">80dp</dimen>
+    <dimen name="_70dp">70dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_14dp">14dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_18dp">18dp</dimen>
+    <dimen name="_23dp">23dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_7dp">7dp</dimen>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_05dp">0.5dp</dimen>
+    <dimen name="division_line">0.5dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_24sp">24sp</dimen>
+    <dimen name="_22sp">22sp</dimen>
+    <dimen name="_7sp">7sp</dimen>
+
+
+
+
+
+
+
+
+
+
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#ededed"
+    android:paddingBottom="@dimen/_10dp"
+    android:paddingTop="@dimen/_10dp"
+    android:paddingRight="@dimen/_15dp"
+    android:paddingLeft="@dimen/_15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:background="@drawable/search_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <EditText
+                android:hint="搜索城市"
+                android:id="@+id/et_city"
+                android:singleLine="true"
+                android:paddingTop="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:textSize="@dimen/text_size_small"
+                android:background="@null"
+                android:textColor="#b8b8b8"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

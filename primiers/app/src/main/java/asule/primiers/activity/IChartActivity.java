@@ -9,7 +9,7 @@ import java.util.Random;
 
 import asule.primiers.BaseActivity;
 import asule.primiers.R;
-import asule.primiers.bean.PointEntity;
+import asule.primiers.entity.PointEntity;
 import asule.primiers.view.IChartView;
 
 /**

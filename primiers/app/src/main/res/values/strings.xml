@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">primiers</string>
+    <string name="app_name">AsuleDemo</string>
 
     <string name="Jelly">Jelly</string>
     <string name="KitKat">KitKat</string>
     <string name="Lollipop">Lollipop</string>
+
+
+
+    <string name="loading">正在加载中...</string>
+    <string name="reloading">重新加载</string>
+    <string name="net_error">网络错误</string>
+    <string name="no_empty">没有结果</string>
 
 </resources>

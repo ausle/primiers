@@ -6,6 +6,8 @@ import android.widget.LinearLayout;
 
 import asule.primiers.R;
 import asule.primiers.activity.IChartActivity;
+import asule.primiers.activity.IClockActivity;
+import asule.primiers.activity.IContactActivity;
 
 
 /**
@@ -32,7 +34,9 @@ public class DrawerOneFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void initListener() {
         super.initListener();
-        mView.findViewById(R.id.card0).setOnClickListener(this);
+        for (int i = 0; i <ll.getChildCount(); i++) {
+            ll.getChildAt(i).setOnClickListener(this);
+        }
     }
 
     @Override
@@ -40,6 +44,14 @@ public class DrawerOneFragment extends BaseFragment implements View.OnClickListe
         switch (v.getId()){
             case R.id.card0:
                 intent = new Intent(mActivity,IChartActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card1:
+                intent = new Intent(mActivity,IClockActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card2:
+                intent = new Intent(mActivity,IContactActivity.class);
                 startActivity(intent);
                 break;
         }

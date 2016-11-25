@@ -39,14 +39,4 @@ public class NoSlideViewPager extends ViewPager{
         }
         return super.onTouchEvent(ev);
     }
-
-
-
-//ViewPager的滑动都用到了scrollTo，如要禁止滑动,复写scrollTo。禁止滑动带来的后果是，没法去切换ViewPager的各个页面。这里不符合实际场景。
-//    @Override
-//    public void scrollTo(int x, int y){
-//        if (isCanScroll){
-//            super.scrollTo(x, y);
-//        }
-//    }
 }

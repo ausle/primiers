@@ -1,32 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent">
+
+        <ScrollView
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card0"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:layout_margin="@dimen/def_padding"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:text="曲线图的绘制"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </android.support.v7.widget.CardView>
 
 
-    <LinearLayout
-        android:id="@+id/ll"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:layout_margin="@dimen/def_padding"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card0"
-            android:background="?android:attr/selectableItemBackground"
-            android:layout_margin="@dimen/card_margin"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
+                            <TextView
+                                android:layout_gravity="center"
+                                android:text="绘制钟表"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </android.support.v7.widget.CardView>
 
-            <TextView
-                android:layout_gravity="center"
-                android:text="曲线图的绘制"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-</ScrollView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card2"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:layout_margin="@dimen/def_padding"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:text="联系人"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+        </ScrollView>
+</RelativeLayout>
+
+
 
 
 

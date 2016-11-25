@@ -1,4 +1,4 @@
-package asule.primiers.bean;
+package asule.primiers.entity;
 
 /**
  * Created by wcx on 2015/12/3.

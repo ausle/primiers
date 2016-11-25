@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="IChartView">
-
-
         <attr name="xTextWidth" format="integer"/>
         <attr name="xTextHeight" format="integer"/>
         <attr name="xTextColor" format="color"/>
@@ -11,9 +9,7 @@
         <attr name="xHeight" format="integer"/>
         <attr name="xColor" format="color"/>
         <attr name="xTextSpace" format="integer"/>
-
         <attr name="xDegreeColor" format="color"/>
-
         <attr name="xDegreeWidth" format="integer"/>
         <attr name="xDegreeHeight" format="integer"/>
 
@@ -26,13 +22,29 @@
         <attr name="yHeight" format="integer"/>
         <attr name="yColor" format="color"/>
         <attr name="yTextSpace" format="integer"/>
-
         <attr name="yDegreeWidth" format="integer"/>
         <attr name="yDegreeHeight" format="integer"/>
         <attr name="yDegreeColor" format="color"/>
 
         <attr name="pointColor" format="color"></attr>
         <attr name="pointStroke" format="integer"></attr>
-
     </declare-styleable>
+
+
+    <!--<declare-styleable name="IClockView">-->
+        <!--&lt;!&ndash; 钟表的刻度&ndash;&gt;-->
+        <!--<attr name="degreeWidth" format="integer"/>-->
+        <!--<attr name="degreeHeight" format="integer"/>-->
+        <!--<attr name="degreeColor" format="color"/>-->
+
+        <!--&lt;!&ndash; 钟表的半径&ndash;&gt;-->
+        <!--<attr name="clockRadius" format="integer"/>-->
+        <!--<attr name="secondsClockRadius" format="integer"/>-->
+        <!--<attr name="minuteClockRadius" format="integer"/>-->
+        <!--<attr name="hourClockRadius" format="integer"/>-->
+
+        <!--&lt;!&ndash; 钟表的宽度和颜色&ndash;&gt;-->
+        <!--<attr name="strokeWidth" format="integer"/>-->
+        <!--<attr name="strokeColor" format="integer"/>-->
+    <!--</declare-styleable>-->
 </resources>
